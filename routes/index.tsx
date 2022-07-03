@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import NavBar from "../islands/NavBar.tsx";
+import NavBar from "../components/NavBar.tsx";
 
 export default function Home() {
     return (
