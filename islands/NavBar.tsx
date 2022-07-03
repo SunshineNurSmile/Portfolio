@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 
-export default function Nav() {
+export default function NavBar() {
     return (
         <div class={tw`p-2 flex justify-center`}>
             <div class={tw`p-2 text-white hover:text-pink-300`}>
