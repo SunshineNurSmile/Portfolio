@@ -5,13 +5,18 @@ import { tw } from "@twind";
 export default function Contact() {
     return (
         <div
-            class={tw`absolute bottom-0 w-screen px-4 py-2 flex justify-center bg-gray-900`}
+            class={tw`absolute bottom-0 w-screen px-4 py-2 flex flex-col justify-center items-center bg-gray-900`}
         >
+            <div id="tip" class={tw`px-2 py-1 hidden text-white border-white border rounded-full`}>Email Address Copied to Clipboard</div>
             <div class={tw`flex justify-center items-center`}>
                 <svg
                     class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1`}
                     onClick={() => {
-                        navigator.clipboard.writeText("yuanyiwang.will@gmail.com"); 
+                        navigator.clipboard.writeText("yuanyiwang.will@gmail.com");
+                        document.getElementById("tip").classList.remove("hidden");
+                        setTimeout(() => {
+                            document.getElementById("tip").classList.add("hidden");
+                        }, 1000);
                     }}
                 >
                     <path
