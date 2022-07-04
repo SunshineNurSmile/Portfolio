@@ -1,7 +1,8 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import NavBar from "../components/NavBar.tsx";
+import NavBar from "../islands/NavBar.tsx";
+import Contact from "../islands/Contact.tsx";
 
 export default function Home() {
     return (
@@ -13,6 +14,8 @@ export default function Home() {
             <div class={tw`flex justify-center text-white p-4`}>
                 This is going to be my portfolio site.
             </div>
+
+            <Contact />
         </div>
     );
 }
