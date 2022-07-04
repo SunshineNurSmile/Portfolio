@@ -21,11 +21,11 @@ export default function Contact() {
                             "yuanyiwang.will@gmail.com"
                         );
                         document
-                            .getElementById("tip")
+                            .getElementById("tip")!
                             .classList.remove("hidden");
                         setTimeout(() => {
                             document
-                                .getElementById("tip")
+                                .getElementById("tip")!
                                 .classList.add("hidden");
                         }, 1000);
                     }}

@@ -12,7 +12,7 @@ export default function Home() {
             <NavBar />
 
             <div class={tw`flex justify-center text-white p-4`}>
-                This is going to be my portfolio site.
+                This is going to be my portfolio website.
             </div>
 
             <Contact />
