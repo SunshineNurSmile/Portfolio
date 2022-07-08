@@ -1,6 +1,11 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import Name from "../components/Name.tsx";
+
+function jumpHome() {
+    window.location.href = "/";
+}
 
 export default function NavBar() {
     return (
@@ -9,62 +14,9 @@ export default function NavBar() {
         >
             <div
                 class={tw`p-2 hidden text-white sm:flex sm:items-center sm:text-4xl`}
+                onClick={jumpHome}
             >
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    Y
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    u
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    a
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    n
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    y
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    i
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    &nbsp;
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    W
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    a
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    n
-                </p>
-                <p
-                    class={tw`transition ease-in-out duration-100 hover:-translate-y-2 hover:text-pink-300 hover:cursor-default`}
-                >
-                    g
-                </p>
+                <Name />
             </div>
             <div class={tw`p-2 flex justify-center items-center`}>
                 <div
