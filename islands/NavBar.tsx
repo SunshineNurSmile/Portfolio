@@ -3,11 +3,11 @@ import { h } from "preact";
 import { tw } from "@twind";
 import Name from "../components/Name.tsx";
 
-function jumpHome() {
+const jumpHome = () => {
     window.location.href = "/";
-}
+};
 
-export default function NavBar() {
+const NavBar = () => {
     return (
         <div
             class={tw`px-4 py-2 flex justify-center bg-gray-900 sm:justify-between`}
@@ -35,4 +35,6 @@ export default function NavBar() {
             </div>
         </div>
     );
-}
+};
+
+export default NavBar;

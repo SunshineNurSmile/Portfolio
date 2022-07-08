@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 
-export default function Contact() {
+const Contact = () => {
     return (
         <div
             class={tw`absolute bottom-0 w-screen px-4 py-2 flex justify-center items-center bg-gray-900`}
@@ -64,4 +64,6 @@ export default function Contact() {
             </div>
         </div>
     );
-}
+};
+
+export default Contact;

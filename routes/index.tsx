@@ -4,7 +4,7 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 import Contact from "../islands/Contact.tsx";
 
-export default function Home() {
+const Home = () => {
     return (
         <div class={tw`bg-gray-800 h-screen w-screen`}>
             <title>Yuanyi Wang | Home</title>
@@ -18,4 +18,6 @@ export default function Home() {
             <Contact />
         </div>
     );
-}
+};
+
+export default Home;

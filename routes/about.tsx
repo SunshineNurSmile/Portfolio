@@ -4,7 +4,7 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 import Contact from "../islands/Contact.tsx";
 
-export default function About() {
+const About = () => {
     return (
         <div class={tw`bg-gray-800 h-screen w-screen`}>
             <title>Yuanyi Wang | About</title>
@@ -18,4 +18,6 @@ export default function About() {
             <Contact />
         </div>
     );
-}
+};
+
+export default About;
