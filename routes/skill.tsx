@@ -197,11 +197,10 @@ const Skill = () => {
                                             Grande Valse Brillante
                                         </li>
                                         <li class={tw`flex justify-end`}>
-                                            Etudes Op. 10, No. 5 (Black Keys)
+                                            Etudes Op. 10, No. 5
                                         </li>
                                         <li class={tw`flex justify-end`}>
                                             Etudes Op. 10, No. 12
-                                            (Revolutionary)
                                         </li>
                                         <li class={tw`flex justify-end`}>
                                             Nocturne Op. 9, No. 2
