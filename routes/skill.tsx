@@ -52,10 +52,8 @@ const Skill = () => {
 
                         <div class={tw`text-center mt-4`}>
                             <ul>
-                                <li>
-                                    Vue Standalone Script | React | Next | Fresh
-                                    | Remix
-                                </li>
+                                <li>Vue Standalone Script | React</li>
+                                <li>Next | Fresh | Remix</li>
                                 <li>AWS | Google Cloud | Linux</li>
                                 <li>Git | MySQL | LaTeX</li>
                             </ul>
@@ -86,7 +84,9 @@ const Skill = () => {
                                 </div>
                                 <div>
                                     <ul>
-                                        <li class={tw`flex justify-end items-center`}>
+                                        <li
+                                            class={tw`flex justify-end items-center`}
+                                        >
                                             Mephisto Waltz No. 1{" "}
                                             <span
                                                 class={tw`text-xs text-pink-300`}
@@ -96,12 +96,24 @@ const Skill = () => {
                                                 </a>
                                             </span>
                                         </li>
-                                        <li class={tw`flex justify-end`}>Rapsodie Espagnole</li>
-                                        <li class={tw`flex justify-end`}>Hungarian Rapsodie No. 2</li>
-                                        <li class={tw`flex justify-end`}>Hungarian Rapsodie No. 2</li>
-                                        <li class={tw`flex justify-end`}>La Campanella</li>
-                                        <li class={tw`flex justify-end`}>Widmung</li>
-                                        <li class={tw`flex justify-end`}>Ständchen</li>
+                                        <li class={tw`flex justify-end`}>
+                                            Rapsodie Espagnole
+                                        </li>
+                                        <li class={tw`flex justify-end`}>
+                                            Hungarian Rapsodie No. 2
+                                        </li>
+                                        <li class={tw`flex justify-end`}>
+                                            Hungarian Rapsodie No. 2
+                                        </li>
+                                        <li class={tw`flex justify-end`}>
+                                            La Campanella
+                                        </li>
+                                        <li class={tw`flex justify-end`}>
+                                            Widmung
+                                        </li>
+                                        <li class={tw`flex justify-end`}>
+                                            Ständchen
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -115,7 +127,9 @@ const Skill = () => {
                                 </div>
                                 <div>
                                     <ul>
-                                        <li class={tw`flex justify-end items-center`}>
+                                        <li
+                                            class={tw`flex justify-end items-center`}
+                                        >
                                             Piano Concerto No. 1{" "}
                                             <span
                                                 class={tw`text-xs text-pink-300`}
@@ -138,7 +152,9 @@ const Skill = () => {
                                 </div>
                                 <div>
                                     <ul>
-                                        <li class={tw`flex justify-end items-center`}>
+                                        <li
+                                            class={tw`flex justify-end items-center`}
+                                        >
                                             Prelude Op. 23, No. 4{" "}
                                             <span
                                                 class={tw`text-xs text-pink-300`}
@@ -184,7 +200,8 @@ const Skill = () => {
                                             Etudes Op. 10, No. 5 (Black Keys)
                                         </li>
                                         <li class={tw`flex justify-end`}>
-                                            Etudes Op. 10, No. 12 (Revolutionary)
+                                            Etudes Op. 10, No. 12
+                                            (Revolutionary)
                                         </li>
                                         <li class={tw`flex justify-end`}>
                                             Nocturne Op. 9, No. 2
