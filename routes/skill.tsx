@@ -76,6 +76,7 @@ const Skill = () => {
                         <div class={tw`text-center text-lg mt-4 text-pink-300`}>
                             My Repertoires
                         </div>
+                        <div class={tw`text-xs text-center`}>Video / Recording available with pink titles</div>
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
                                 <div>Liszt:</div>
@@ -86,6 +87,13 @@ const Skill = () => {
                                         >
                                             <a href="https://youtu.be/5WIEvTRGla8">
                                                 Mephisto Waltz No. 1
+                                            </a>
+                                        </li>
+                                        <li
+                                            class={tw`flex justify-end items-center text-pink-300`}
+                                        >
+                                            <a href="https://youtu.be/P7r8jQGXQY8">
+                                                Mazeppa
                                             </a>
                                         </li>
                                         <li class={tw`flex justify-end`}>
