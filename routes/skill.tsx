@@ -78,23 +78,15 @@ const Skill = () => {
                         </div>
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300`}>
-                                    Franz Liszt
-                                    <span class={tw`text-white`}>:</span>
-                                </div>
+                                <div>Liszt:</div>
                                 <div>
                                     <ul>
                                         <li
-                                            class={tw`flex justify-end items-center`}
+                                            class={tw`flex justify-end items-center text-pink-300`}
                                         >
-                                            Mephisto Waltz No. 1{" "}
-                                            <span
-                                                class={tw`text-xs text-pink-300`}
-                                            >
-                                                <a href="https://youtu.be/5WIEvTRGla8">
-                                                    Video
-                                                </a>
-                                            </span>
+                                            <a href="https://youtu.be/5WIEvTRGla8">
+                                                Mephisto Waltz No. 1
+                                            </a>
                                         </li>
                                         <li class={tw`flex justify-end`}>
                                             Rapsodie Espagnole
@@ -121,23 +113,15 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300`}>
-                                    Pyotr Ilyich Tchaikovsky
-                                    <span class={tw`text-white`}>:</span>
-                                </div>
+                                <div>Tchaikovsky:</div>
                                 <div>
                                     <ul>
                                         <li
-                                            class={tw`flex justify-end items-center`}
+                                            class={tw`flex justify-end items-center text-pink-300`}
                                         >
-                                            Piano Concerto No. 1{" "}
-                                            <span
-                                                class={tw`text-xs text-pink-300`}
-                                            >
-                                                <a href="https://youtu.be/DDB6CZ19Xl8">
-                                                    Video
-                                                </a>
-                                            </span>
+                                            <a href="https://youtu.be/DDB6CZ19Xl8">
+                                                Piano Concerto No. 1
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -146,23 +130,15 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300`}>
-                                    Sergei Rachmaninoff
-                                    <span class={tw`text-white`}>:</span>
-                                </div>
+                                <div>Rachmaninoff:</div>
                                 <div>
                                     <ul>
                                         <li
-                                            class={tw`flex justify-end items-center`}
+                                            class={tw`flex justify-end items-center text-pink-300`}
                                         >
-                                            Prelude Op. 23, No. 4{" "}
-                                            <span
-                                                class={tw`text-xs text-pink-300`}
-                                            >
-                                                <a href="https://drive.google.com/file/d/1BQBgRoUb-goEusQK-txYLTBrXeAsywsd/view?usp=sharing">
-                                                    Recording
-                                                </a>
-                                            </span>
+                                            <a href="https://drive.google.com/file/d/1BQBgRoUb-goEusQK-txYLTBrXeAsywsd/view?usp=sharing">
+                                                Prelude Op. 23, No. 4
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -171,9 +147,8 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300`}>
-                                    Ludwig van Beethoven
-                                    <span class={tw`text-white`}>:</span>
+                                <div>
+                                    Beethoven:
                                 </div>
                                 <div>
                                     <ul>
@@ -187,9 +162,8 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300`}>
-                                    Frédéric Chopin
-                                    <span class={tw`text-white`}>:</span>
+                                <div>
+                                    Chopin:
                                 </div>
                                 <div>
                                     <ul>
