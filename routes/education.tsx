@@ -14,7 +14,7 @@ const Education = () => {
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
                 <div class={tw`flex flex-col justify-center`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
-                        Schools Attended
+                        Degrees
                     </h1>
                     <div
                         class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
@@ -79,7 +79,7 @@ const Education = () => {
                     <h1
                         class={tw`flex justify-center text-pink-300 text-4xl mt-10`}
                     >
-                        Courses Taken
+                        Courses
                     </h1>
                     <div class={tw`flex flex-col justify-center`}>
                         <div
@@ -149,7 +149,7 @@ const Education = () => {
                                 </div>
                             </div>
                             <div>
-                                Database Management |
+                                Database Management |{" "}
                                 <span class={tw`text-pink-300`}>MySQL</span>
                             </div>
                         </div>
