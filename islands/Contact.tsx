@@ -15,7 +15,7 @@ const Contact = () => {
             </div>
             <div class={tw`flex justify-center items-center`}>
                 <svg
-                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1`}
+                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1 hover:cursor-pointer`}
                     onClick={() => {
                         navigator.clipboard.writeText(
                             "yuanyiwang.will@gmail.com"
@@ -37,7 +37,7 @@ const Contact = () => {
                 </svg>
 
                 <svg
-                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1`}
+                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1 hover:cursor-pointer`}
                     onClick={() => {
                         window.location.href =
                             "https://github.com/SunshineNurSmile";
@@ -50,7 +50,7 @@ const Contact = () => {
                 </svg>
 
                 <svg
-                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1`}
+                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1 hover:cursor-pointer`}
                     onClick={() => {
                         window.location.href =
                             "https://www.linkedin.com/in/yuanyiw";

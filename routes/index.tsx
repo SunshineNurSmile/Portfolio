@@ -11,10 +11,10 @@ const Home = () => {
 
             <NavBar />
 
-            <div class={tw`flex flex-row justify-center pt-20 w-screen`}>
+            <div class={tw`flex justify-center pt-24 pb-20 text-white`}>
                 <div>
                     <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
-                    <div class={tw`text-3xl text-white`}>
+                    <div class={tw`text-3xl`}>
                         <p class={tw`py-1`}>
                             My English name is{" "}
                             <span class={tw`text-pink-300`}>Will</span>
@@ -26,9 +26,11 @@ const Home = () => {
             </div>
 
             <div
-                class={tw`absolute bottom-20 w-screen flex justify-center text-white`}
+                class={tw`absolute bottom-20 w-screen flex flex-col justify-center text-white`}
             >
-                Please note that this website is at an early stage
+                <div class={tw`flex justify-center`}>
+                    Please note that this website is at an early stage
+                </div>
             </div>
 
             <Contact />

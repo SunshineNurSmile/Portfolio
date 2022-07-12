@@ -12,7 +12,7 @@ const Education = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center`}>
+                <div class={tw`flex flex-col justify-center w-4/5 max-w-2xl`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Degrees
                     </h1>
@@ -20,7 +20,7 @@ const Education = () => {
                         class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
                         <div class={tw`flex justify-between items-center`}>
-                            <div class={tw`text-2xl pr-8`}>
+                            <div class={tw`text-2xl`}>
                                 Boston University
                             </div>
                             <div class={tw`text-md`}>09/2021 - 12/2022</div>

@@ -12,7 +12,7 @@ const Project = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center`}>
+                <div class={tw`flex flex-col justify-center w-4/5 max-w-xl`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Software Projects
                     </h1>
@@ -20,16 +20,20 @@ const Project = () => {
                     <div
                         class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
-                        <div
-                            class={tw`flex justify-center text-2xl hover:text-pink-300`}
-                        >
-                            <a href="https://github.com/SunshineNurSmile/Fitness-Trainer-Finder-Frontend">
+                        <div class={tw`flex flex-col justify-center`}>
+                            <a
+                                class={tw`flex justify-center text-2xl hover:text-pink-300`}
+                                href="https://github.com/SunshineNurSmile/Fitness-Trainer-Finder-Frontend"
+                            >
                                 Fitness Trainer Finder
+                            </a>
+                            <a class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`} href="https://youtu.be/Oj4OSOzPq7Y">
+                                Video Demo
                             </a>
                         </div>
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Languages
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -48,7 +52,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Tools<span class={tw`text-white`}>:</span>
                                 </div>
                                 <div>
@@ -66,7 +70,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Deployment
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -82,7 +86,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Features
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -125,16 +129,20 @@ const Project = () => {
                     <div
                         class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
-                        <div
-                            class={tw`flex justify-center text-2xl hover:text-pink-300`}
-                        >
-                            <a href="https://github.com/SunshineNurSmile/Android-Music-Player">
+                        <div class={tw`flex flex-col justify-center`}>
+                            <a
+                                class={tw`flex justify-center text-2xl hover:text-pink-300`}
+                                href="https://github.com/SunshineNurSmile/Android-Music-Player"
+                            >
                                 Android Music Player
+                            </a>
+                            <a class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`} href="https://youtube.com/shorts/KMeHsfej5e0">
+                                Video Demo
                             </a>
                         </div>
                         <div class={tw`flex flex-col justify-center pt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Languages
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -147,7 +155,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Tools<span class={tw`text-white`}>:</span>
                                 </div>
                                 <div>
@@ -159,7 +167,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Features
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -202,7 +210,7 @@ const Project = () => {
                         </div>
                         <div class={tw`flex flex-col justify-center pt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Languages
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -215,7 +223,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Tools<span class={tw`text-white`}>:</span>
                                 </div>
                                 <div>
@@ -264,7 +272,7 @@ const Project = () => {
                         </div>
                         <div class={tw`flex flex-col justify-center pt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Languages
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -277,7 +285,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Tools<span class={tw`text-white`}>:</span>
                                 </div>
                                 <div>
@@ -326,7 +334,7 @@ const Project = () => {
                         </div>
                         <div class={tw`flex flex-col justify-center pt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Languages
                                     <span class={tw`text-white`}>:</span>
                                 </div>
@@ -339,7 +347,7 @@ const Project = () => {
                                 </div>
                             </div>
                             <div class={tw`flex justify-between mt-4`}>
-                                <div class={tw`text-pink-300 pr-16`}>
+                                <div class={tw`text-pink-300 `}>
                                     Tools<span class={tw`text-white`}>:</span>
                                 </div>
                                 <div>
