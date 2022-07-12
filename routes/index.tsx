@@ -11,7 +11,17 @@ const Home = () => {
 
             <NavBar />
 
-            <div class={tw`flex justify-center pt-24 pb-20 text-white`}>
+            <div>
+                <picture>
+                    <source srcset="/background.jpg" type="image/jpg" />
+                    <img
+                        src="/background.jpg"
+                        class={tw`w-screen h-screen object-cover`}
+                    />
+                </picture>
+            </div>
+
+            <div class={tw`absolute top-40 left-10 text-white`}>
                 <div>
                     <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
                     <div class={tw`text-3xl`}>
