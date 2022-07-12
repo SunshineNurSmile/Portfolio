@@ -25,7 +25,7 @@ const NavBar = () => {
             </div>
 
             <div
-                class={tw`hidden absolute bg-gray-400 top-20 right-4 p-4 text-center text-white h-auto w-auto rounded-lg`}
+                class={tw`hidden absolute bg-gray-400 top-20 right-4 p-4 text-center text-white h-auto w-auto rounded-lg z-10`}
                 id="menu"
             >
                 <ul>
