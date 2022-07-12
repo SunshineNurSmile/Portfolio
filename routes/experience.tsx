@@ -12,7 +12,7 @@ const Experience = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-4/5 max-w-2xl`}>
+                <div class={tw`flex flex-col justify-center w-11/12 max-w-2xl`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Experience
                     </h1>

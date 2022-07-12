@@ -12,7 +12,7 @@ const Project = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-4/5 max-w-xl`}>
+                <div class={tw`flex flex-col justify-center w-11/12 max-w-xl`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Software Projects
                     </h1>
