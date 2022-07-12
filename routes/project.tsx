@@ -123,6 +123,12 @@ const Project = () => {
                                     </ul>
                                 </div>
                             </div>
+                            <div class={tw`flex justify-center text-xs`}>
+                                This was a group project
+                            </div>
+                            <div class={tw`flex justify-center text-xs`}>
+                                Listed features are my work
+                            </div>
                         </div>
                     </div>
 
