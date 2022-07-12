@@ -6,7 +6,7 @@ import Contact from "../islands/Contact.tsx";
 
 const Project = () => {
     return (
-        <div class={tw`bg-gray-800 w-auto`}>
+        <div class={tw`bg-gray-800 w-auto min-h-screen`}>
             <title>Yuanyi Wang | Project</title>
 
             <NavBar />

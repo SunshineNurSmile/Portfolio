@@ -6,7 +6,7 @@ import Contact from "../islands/Contact.tsx";
 
 const Skill = () => {
     return (
-        <div class={tw`bg-gray-800 w-auto`}>
+        <div class={tw`bg-gray-800 w-auto min-h-screen`}>
             <title>Yuanyi Wang | Skill</title>
 
             <NavBar />
