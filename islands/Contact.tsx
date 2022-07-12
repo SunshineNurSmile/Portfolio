@@ -9,7 +9,7 @@ const Contact = () => {
         >
             <div
                 id="tip"
-                class={tw`px-2 py-1 hidden text-white border-white border rounded-full`}
+                class={tw`px-2 py-1 hidden text-white border-white border border-2 rounded-full`}
             >
                 Email Copied
             </div>
