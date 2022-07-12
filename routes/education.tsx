@@ -12,7 +12,7 @@ const Education = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-11/12 max-w-2xl`}>
+                <div class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}>
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Degrees
                     </h1>
@@ -38,7 +38,7 @@ const Education = () => {
                                 <li>
                                     Current GPA:{" "}
                                     <span class={tw`text-pink-300`}>
-                                        3.96/4.00
+                                        3.96 / 4.00
                                     </span>
                                 </li>
                             </ul>
