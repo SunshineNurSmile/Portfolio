@@ -75,7 +75,7 @@ const Experience = () => {
                         class={tw`text-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
                         <p>
-                            I have gained experience in team collaboration, communication, problem solving, and adaptation to unfamiliar environments and technologies. All of these are necessary abilities for a successful software engineering career.
+                            I have gained experience in team collaboration, communication, problem solving, and adaptation to unfamiliar environments and technologies. All of which are necessary abilities for a successful software engineering career.
                         </p>
                     </div>
 
