@@ -14,7 +14,7 @@ const Home = () => {
             <div class={tw`flex flex-row justify-center pt-20 w-screen`}>
                 <div>
                     <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
-                    <div class={tw`text-4xl text-white`}>
+                    <div class={tw`text-3xl text-white`}>
                         <p class={tw`py-1`}>
                             My English name is{" "}
                             <span class={tw`text-pink-300`}>Will</span>
