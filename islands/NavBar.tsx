@@ -8,46 +8,24 @@ const jumpHome = () => {
 };
 
 const showMenu = () => {
-    if (document.getElementById("menu")!.classList.contains("hidden")) {
-        document.getElementById("menu")!.classList.remove("hidden");
-    } else {
-        document.getElementById("menu")!.classList.add("hidden");
-    }
+    document.getElementById("menu")!.classList.remove("hidden");
+    document.getElementById("name")!.classList.add("hidden");
+    document.getElementById("button")!.classList.add("hidden");
+    document.getElementById("nav")!.classList.remove("justify-between");
+    document.getElementById("nav")!.classList.add("justify-center");
 };
 
 const NavBar = () => {
     return (
         <div
             class={tw`fixed top-0 w-screen px-4 py-2 flex justify-between bg-gray-900`}
+            id="nav"
         >
-            <div class={tw`p-2 text-3xl text-white`} onClick={jumpHome}>
+            <div class={tw`p-2 text-3xl text-white`} id="name" onClick={jumpHome}>
                 <Name />
             </div>
 
-            <div
-                class={tw`hidden absolute bg-gray-400 top-20 right-4 p-4 text-center text-white h-auto w-auto rounded-lg z-50`}
-                id="menu"
-            >
-                <ul class={tw`z-50`}>
-                    <li class={tw`hover:text-pink-300`}>
-                        <a href="/">Home</a>
-                    </li>
-                    <li class={tw`mt-4 hover:text-pink-300`}>
-                        <a href="/education">Education</a>
-                    </li>
-                    <li class={tw`mt-4 hover:text-pink-300`}>
-                        <a href="/project">Project</a>
-                    </li>
-                    <li class={tw`mt-4 hover:text-pink-300`}>
-                        <a href="/experience">Experience</a>
-                    </li>
-                    <li class={tw`mt-4 hover:text-pink-300`}>
-                        <a href="/skill">Skill</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class={tw`flex items-center md:hidden mr-6`}>
+            <div class={tw`flex items-center md:hidden mr-6`} id="button">
                 <svg
                     class={tw`h-6 w-6 hover:cursor-pointer`}
                     onClick={showMenu}
@@ -59,7 +37,7 @@ const NavBar = () => {
                 </svg>
             </div>
 
-            <div class={tw`hidden p-2 justify-center items-center md:flex`}>
+            <div class={tw`hidden p-2 flex justify-center items-center md:flex`} id="menu">
                 <div
                     class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
