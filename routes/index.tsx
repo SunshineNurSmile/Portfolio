@@ -11,8 +11,24 @@ const Home = () => {
 
             <NavBar />
 
-            <div class={tw`flex justify-center text-white p-4`}>
-                This is going to be my portfolio website.
+            <div class={tw`flex flex-row justify-center pt-20 w-screen`}>
+                <div>
+                    <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
+                    <div class={tw`text-4xl text-white`}>
+                        <p class={tw`py-1`}>
+                            My English name is{" "}
+                            <span class={tw`text-pink-300`}>Will</span>
+                        </p>
+                        <p class={tw`py-1`}>and I'm currently a student at</p>
+                        <p class={tw`py-1`}>Boston University</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class={tw`absolute bottom-20 w-screen flex justify-center text-white`}
+            >
+                Please note that this website is at an early stage
             </div>
 
             <Contact />

@@ -5,7 +5,7 @@ import { tw } from "@twind";
 const Contact = () => {
     return (
         <div
-            class={tw`absolute bottom-0 w-screen px-4 py-2 flex justify-center items-center bg-gray-900`}
+            class={tw`fixed bottom-0 w-screen px-4 py-2 flex justify-center items-center bg-gray-900`}
         >
             <div
                 id="tip"
