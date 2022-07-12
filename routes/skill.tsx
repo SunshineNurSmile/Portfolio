@@ -103,7 +103,7 @@ const Skill = () => {
                                             Hungarian Rapsodie No. 2
                                         </li>
                                         <li class={tw`flex justify-end`}>
-                                            Hungarian Rapsodie No. 2
+                                            Hungarian Rapsodie No. 6
                                         </li>
                                         <li class={tw`flex justify-end`}>
                                             La Campanella
