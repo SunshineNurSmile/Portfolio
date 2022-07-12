@@ -6,7 +6,7 @@ import Contact from "../islands/Contact.tsx";
 
 const Home = () => {
     return (
-        <div class={tw`bg-gray-800 h-screen w-screen select-none`}>
+        <div class={tw`bg-gray-800 h-screen w-screen`}>
             <title>Yuanyi Wang | Home</title>
 
             <NavBar />
@@ -21,7 +21,7 @@ const Home = () => {
                 </picture>
             </div>
 
-            <div class={tw`fixed top-40 left-2 text-white sm:left-20 z-0`}>
+            <div class={tw`absolute top-40 left-2 text-white sm:left-20`}>
                 <div>
                     <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
                     <div class={tw`text-3xl`}>
