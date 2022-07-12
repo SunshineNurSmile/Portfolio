@@ -4,56 +4,61 @@ import { tw } from "@twind";
 
 const Name = () => {
     return (
-        <div>
+        <div class={tw`flex justify-center items-center`}>
+            <picture>
+                <source srcset="/head.jpg" type="image/jpg" />
+                <img src="/head.jpg" class={tw`rounded-full w-10 h-10 mr-4 hover:cursor-pointer`} />
+            </picture>
+
             <div class={tw`flex flex-row`}>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     Y
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     u
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     a
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     n
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     y
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     i
                 </p>
-                <p class={tw`hover:cursor-default`}>&nbsp;</p>
+                <p class={tw`hover:cursor-pointer`}>&nbsp;</p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     W
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     a
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     n
                 </p>
                 <p
-                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-default`}
+                    class={tw`transition ease-in-out duration-100 hover:text-pink-300 hover:cursor-pointer`}
                 >
                     g
                 </p>

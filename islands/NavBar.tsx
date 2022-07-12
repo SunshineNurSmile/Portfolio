@@ -13,7 +13,7 @@ const NavBar = () => {
             class={tw`fixed top-0 w-screen px-4 py-2 flex justify-center bg-gray-900 sm:justify-between`}
         >
             <div
-                class={tw`p-2 hidden text-white sm:flex sm:items-center sm:text-3xl`}
+                class={tw`p-2 hidden text-white sm:block sm:text-3xl`}
                 onClick={jumpHome}
             >
                 <Name />
