@@ -13,7 +13,7 @@ const Skill = () => {
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
                 <div
-                    class={tw`flex flex-col justify-center w-full max-w-xl ml-2 mr-2`}
+                    class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
                 >
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Skills
