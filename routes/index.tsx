@@ -21,7 +21,7 @@ const Home = () => {
                 </picture>
             </div>
 
-            <div class={tw`absolute top-40 left-2 text-white sm:left-20`}>
+            <div class={tw`absolute top-40 left-2 text-white sm:left-20 z-0`}>
                 <div>
                     <h1 class={tw`text-8xl text-pink-300 py-6`}>Hello!</h1>
                     <div class={tw`text-3xl`}>
