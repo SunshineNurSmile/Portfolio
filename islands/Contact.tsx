@@ -3,12 +3,28 @@ import { h } from "preact";
 import { tw } from "@twind";
 
 const Contact = () => {
+    const emailClick = () => {
+        navigator.clipboard.writeText("yuanyiwang.will@gmail.com");
+        document.getElementById("email")!.classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("email")!.classList.add("hidden");
+        }, 1000);
+    };
+
+    const wechatClick = () => {
+        navigator.clipboard.writeText("wyy1055866054");
+        document.getElementById("wechat")!.classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("wechat")!.classList.add("hidden");
+        }, 1000);
+    };
+
     return (
         <div
             class={tw`fixed bottom-0 w-screen px-4 py-2 flex justify-center items-center bg-gray-900`}
         >
             <div
-                id="tip"
+                id="email"
                 class={tw`px-2 py-1 hidden text-white border-white border border-2 rounded-full`}
             >
                 Email Copied
@@ -16,19 +32,7 @@ const Contact = () => {
             <div class={tw`flex justify-center items-center`}>
                 <svg
                     class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1 hover:cursor-pointer`}
-                    onClick={() => {
-                        navigator.clipboard.writeText(
-                            "yuanyiwang.will@gmail.com"
-                        );
-                        document
-                            .getElementById("tip")!
-                            .classList.remove("hidden");
-                        setTimeout(() => {
-                            document
-                                .getElementById("tip")!
-                                .classList.add("hidden");
-                        }, 1000);
-                    }}
+                    onClick={emailClick}
                 >
                     <path
                         d="M20 12a8 8 0 1 0-3.562 6.657l1.11 1.664A9.953 9.953 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10v1.5a3.5 3.5 0 0 1-6.396 1.966A5 5 0 1 1 15 8H17v5.5a1.5 1.5 0 0 0 3 0V12zm-8-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
@@ -61,6 +65,27 @@ const Contact = () => {
                         fill="rgba(255,255,255,1)"
                     />
                 </svg>
+
+                <svg
+                    class={tw`h-6 w-6 m-2 transition ease-in-out duration-300 hover:-translate-y-1 hover:cursor-pointer`}
+                    onClick={wechatClick}
+                >
+                    <path
+                        stroke="#FFFFFF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.89703 15.6813C8.20622 15.7097 7.45784 15.4745 7.17 15.3533L4.59745 16.9254L5.35039 14.2324C3.91531 13.2773 3 11.8289 3 10.2073C3 7.33141 5.87918 5 9.43084 5C12.8736 5 15.6845 7.19061 15.8536 9.94435C15.7808 9.94196 15.7075 9.94076 15.634 9.94076C12.6704 9.94076 10.2679 11.8974 10.2679 14.311C10.2679 14.6702 10.3211 15.0193 10.4215 15.3533C10.9954 17.2637 13.1114 18.6813 15.634 18.6813C16.1734 18.6813 16.6942 18.6164 17.1853 18.4958L19.7 20L19.0106 17.7077C20.2242 16.9065 21 15.6825 21 14.311C21 12.5125 19.666 10.9677 17.7599 10.2972"
+                        fill="#18181b"
+                    ></path>
+                </svg>
+
+                <div
+                    id="wechat"
+                    class={tw`px-2 py-1 hidden text-white border-white border border-2 rounded-full`}
+                >
+                    Wechat ID Copied
+                </div>
             </div>
         </div>
     );
