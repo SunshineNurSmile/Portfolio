@@ -18,6 +18,9 @@ const Error = (props: PageProps) => {
                 <div class={tw`text-6xl text-pink-300 sm:text-8xl`}>Error! 404</div>
                 <div class={tw`text-2xl text-white sm:text-4xl`}>{url}</div>
                 <div class={tw`text-2xl text-white sm:text-4xl`}>Does Not Exist</div>
+                <div class={tw`text-4xl text-pink-300 text-underline sm:text-6xl`}>
+                    <a href="/">Go Home</a>
+                </div>
             </div>
 
             <Contact />
