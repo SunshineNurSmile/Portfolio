@@ -15,9 +15,9 @@ const Error = (props: PageProps) => {
             <NavBar />
 
             <div class={tw`flex flex-col justify-center items-center w-screen h-screen`}>
-                <div class={tw`text-8xl text-pink-300`}>Error! 404</div>
-                <div class={tw`text-4xl text-white`}>{url}</div>
-                <div class={tw`text-4xl text-white`}>Does Not Exist</div>
+                <div class={tw`text-6xl text-pink-300 sm:text-8xl`}>Error! 404</div>
+                <div class={tw`text-2xl text-white sm:text-4xl`}>{url}</div>
+                <div class={tw`text-2xl text-white sm:text-4xl`}>Does Not Exist</div>
             </div>
 
             <Contact />
