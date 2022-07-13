@@ -4,7 +4,7 @@ import { tw } from "@twind";
 
 const Contact = () => {
     const emailClick = () => {
-        navigator.clipboard.writeText("yuanyiwang.will@gmail.com");
+        navigator.clipboard.writeText("wyxwyyyl@outlook.com");
         document.getElementById("email")!.classList.remove("hidden");
         setTimeout(() => {
             document.getElementById("email")!.classList.add("hidden");
