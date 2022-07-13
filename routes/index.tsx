@@ -29,7 +29,7 @@ const Home = () => {
                             My English name is{" "}
                             <span class={tw`text-pink-300`}>Will</span>
                         </p>
-                        <p class={tw`py-1`}>and I'm currently a student at</p>
+                        <p class={tw`py-1`}>I'm a Master's student at</p>
                         <p class={tw`py-1`}>Boston University</p>
                     </div>
                 </div>
