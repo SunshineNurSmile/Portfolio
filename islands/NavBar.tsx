@@ -39,7 +39,7 @@ const NavBar = () => {
 
             <div class={tw`hidden p-2 flex justify-center items-center md:flex`} id="menu">
                 <div
-                    class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
+                    class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
                     <a href="/">Home</a>
                 </div>
@@ -47,7 +47,7 @@ const NavBar = () => {
                 <div class={tw`p-2 text-white`}>|</div>
 
                 <div
-                    class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
+                    class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
                     <a href="/education">Education</a>
                 </div>
@@ -55,7 +55,7 @@ const NavBar = () => {
                 <div class={tw`p-2 text-white`}>|</div>
 
                 <div
-                    class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
+                    class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
                     <a href="/project">Project</a>
                 </div>
@@ -63,7 +63,7 @@ const NavBar = () => {
                 <div class={tw`p-2 text-white`}>|</div>
 
                 <div
-                    class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
+                    class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
                     <a href="/experience">Experience</a>
                 </div>
@@ -71,7 +71,7 @@ const NavBar = () => {
                 <div class={tw`p-2 text-white`}>|</div>
 
                 <div
-                    class={tw`transition ease-in-out p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
+                    class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >
                     <a href="/skill">Skill</a>
                 </div>
