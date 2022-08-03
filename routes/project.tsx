@@ -12,7 +12,9 @@ const Project = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}>
+                <div
+                    class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
+                >
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Software Projects
                     </h1>
@@ -27,7 +29,10 @@ const Project = () => {
                             >
                                 Fitness Trainer Finder
                             </a>
-                            <a class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`} href="https://youtu.be/Oj4OSOzPq7Y">
+                            <a
+                                class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`}
+                                href="https://youtu.be/Oj4OSOzPq7Y"
+                            >
                                 Video Demo
                             </a>
                         </div>
@@ -142,7 +147,10 @@ const Project = () => {
                             >
                                 Android Music Player
                             </a>
-                            <a class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`} href="https://youtube.com/shorts/KMeHsfej5e0">
+                            <a
+                                class={tw`flex justify-center text-xs hover:text-pink-300 hover:cursor-pointer`}
+                                href="https://youtube.com/shorts/KMeHsfej5e0"
+                            >
                                 Video Demo
                             </a>
                         </div>

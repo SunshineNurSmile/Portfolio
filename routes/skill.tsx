@@ -76,7 +76,9 @@ const Skill = () => {
                         <div class={tw`text-center text-lg mt-4 text-pink-300`}>
                             My Repertoires
                         </div>
-                        <div class={tw`text-xs text-center`}>Video / Recording available with pink titles</div>
+                        <div class={tw`text-xs text-center`}>
+                            Video / Recording available with pink titles
+                        </div>
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
                                 <div>Liszt:</div>
@@ -155,9 +157,7 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div>
-                                    Beethoven:
-                                </div>
+                                <div>Beethoven:</div>
                                 <div>
                                     <ul>
                                         <li class={tw`flex justify-end`}>
@@ -170,9 +170,7 @@ const Skill = () => {
 
                         <div class={tw`flex flex-col justify-center mt-4`}>
                             <div class={tw`flex justify-between`}>
-                                <div>
-                                    Chopin:
-                                </div>
+                                <div>Chopin:</div>
                                 <div>
                                     <ul>
                                         <li class={tw`flex justify-end`}>

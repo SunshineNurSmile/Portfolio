@@ -12,7 +12,9 @@ const Education = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}>
+                <div
+                    class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
+                >
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Degrees
                     </h1>
@@ -20,9 +22,7 @@ const Education = () => {
                         class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
                         <div class={tw`flex justify-between items-center`}>
-                            <div class={tw`text-2xl`}>
-                                Boston University
-                            </div>
+                            <div class={tw`text-2xl`}>Boston University</div>
                             <div class={tw`text-md`}>09/2021 - 12/2022</div>
                         </div>
 
@@ -180,17 +180,26 @@ const Education = () => {
                                 </div>
                             </div>
                             <div>
-                                Software Engineering |{" "} <span class={tw`text-pink-300`}>Agile</span>
+                                Software Engineering |{" "}
+                                <span class={tw`text-pink-300`}>Agile</span>
                             </div>
                         </div>
 
-                        <div class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}>
+                        <div
+                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
+                        >
                             <div class={tw`flex justify-between`}>
                                 <div class={tw`text-2xl`}>MET CS 683</div>
-                                <div>Grade: <span class={tw`text-lg text-pink-300`}>A</span></div>
+                                <div>
+                                    Grade:{" "}
+                                    <span class={tw`text-lg text-pink-300`}>
+                                        A
+                                    </span>
+                                </div>
                             </div>
                             <div>
-                                Android Application Development | <span class={tw`text-pink-300`}>Kotlin</span>
+                                Android Application Development |{" "}
+                                <span class={tw`text-pink-300`}>Kotlin</span>
                             </div>
                         </div>
                     </div>

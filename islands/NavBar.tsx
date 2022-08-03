@@ -21,7 +21,11 @@ const NavBar = () => {
             class={tw`fixed top-0 w-screen px-4 py-2 flex justify-between bg-gray-900`}
             id="nav"
         >
-            <div class={tw`p-2 text-3xl text-white`} id="name" onClick={jumpHome}>
+            <div
+                class={tw`p-2 text-3xl text-white`}
+                id="name"
+                onClick={jumpHome}
+            >
                 <Name />
             </div>
 
@@ -37,7 +41,10 @@ const NavBar = () => {
                 </svg>
             </div>
 
-            <div class={tw`hidden p-2 flex justify-center items-center md:flex`} id="menu">
+            <div
+                class={tw`hidden p-2 flex justify-center items-center md:flex`}
+                id="menu"
+            >
                 <div
                     class={tw`transition ease-in-out sm:p-1 text-white hover:text-pink-300 hover:-translate-y-1 duration-300`}
                 >

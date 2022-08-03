@@ -12,7 +12,9 @@ const Experience = () => {
             <NavBar />
 
             <div class={tw`flex justify-center text-white pt-24 pb-20`}>
-                <div class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}>
+                <div
+                    class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
+                >
                     <h1 class={tw`flex justify-center text-pink-300 text-4xl`}>
                         Experience
                     </h1>
@@ -75,7 +77,11 @@ const Experience = () => {
                         class={tw`text-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
                         <p>
-                            I have gained experience in team collaboration, communication, problem solving, and adaptation to unfamiliar environments and technologies. All of which are necessary abilities for a successful software engineering career.
+                            I have gained experience in team collaboration,
+                            communication, problem solving, and adaptation to
+                            unfamiliar environments and technologies. All of
+                            which are necessary abilities for a successful
+                            software engineering career.
                         </p>
                     </div>
 
@@ -83,11 +89,12 @@ const Experience = () => {
                         class={tw`text-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
                     >
                         <p>
-                            During the two-month internship at Suirui
-                            Group Co., Ltd, my first task was the organization and categorization
-                            of 15,000 potential customers’ information. I used Microsoft Excel to
-                            efficiently rearrange the customer information based
-                            on criterias such as level of interest, job title,
+                            During the two-month internship at Suirui Group Co.,
+                            Ltd, my first task was the organization and
+                            categorization of 15,000 potential customers’
+                            information. I used Microsoft Excel to efficiently
+                            rearrange the customer information based on
+                            criterias such as level of interest, job title,
                             phone number, etc.
                         </p>
                     </div>
