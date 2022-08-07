@@ -68,7 +68,7 @@ const Experience = () => {
                     >
                         <p>
                             I understand that, although marketing and software
-                            engineering seems to be two parallel fields, they do
+                            engineering seem to be two parallel fields, they do
                             intersect at certain points.
                         </p>
                     </div>
