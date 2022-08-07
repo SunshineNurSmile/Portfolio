@@ -17,6 +17,7 @@ const Home = () => {
                     <img
                         src="/background.jpg"
                         class={tw`w-screen h-screen object-cover`}
+                        alt="Yuanyi Wang Background Picture"
                     />
                 </picture>
             </div>
