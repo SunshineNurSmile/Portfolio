@@ -5,14 +5,11 @@ import { tw } from "@twind";
 const Name = () => {
     return (
         <div class={tw`flex justify-center items-center`}>
-            <picture>
-                <source srcset="/head.jpg" type="image/jpg" />
-                <img
-                    src="/head.jpg"
-                    class={tw`rounded-full w-10 h-10 mr-4 hover:cursor-pointer`}
-                    alt="Yuanyi Wang Profile Picture"
-                />
-            </picture>
+            <img
+                src="/head.jpg"
+                class={tw`rounded-full w-10 h-10 mr-4 hover:cursor-pointer`}
+                alt="Yuanyi Wang Profile Picture"
+            />
 
             <div class={tw`flex flex-row`}>
                 <p

@@ -12,14 +12,11 @@ const Home = () => {
             <NavBar />
 
             <div>
-                <picture>
-                    <source srcset="/background.jpg" type="image/jpg" />
-                    <img
-                        src="/background.jpg"
-                        class={tw`w-screen h-screen object-cover`}
-                        alt="Yuanyi Wang Background Picture"
-                    />
-                </picture>
+                <img
+                    src="/background.jpg"
+                    class={tw`w-screen h-screen object-cover`}
+                    alt="Yuanyi Wang Background Picture"
+                />
             </div>
 
             <div class={tw`absolute top-40 left-2 text-white sm:left-20`}>
