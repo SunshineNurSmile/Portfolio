@@ -8,7 +8,8 @@ import Course, { error, course } from "../interfaces/course.tsx";
 
 export const handler: Handlers<Array<Course> | null> = {
     async GET(_, ctx) {
-        const resp = await fetch(`Deno.env.get("BACKEND_URL")/courses`);
+        const dbURL = Deno.env.get("BACKEND_URL") + "/courses";
+        const resp = await fetch(dbURL);
         if (resp.status === 404) {
             console.log("404");
             return ctx.render(null);
