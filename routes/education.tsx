@@ -3,8 +3,24 @@ import { h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 import Contact from "../islands/Contact.tsx";
+import { Handlers, PageProps } from "$fresh/server.ts";
+import Course, { error, course } from "../interfaces/course.tsx";
 
-const Education = () => {
+export const handler: Handlers<Array<Course> | null> = {
+    async GET(_, ctx) {
+        const resp = await fetch(`Deno.env.get("BACKEND_URL")/courses`);
+        if (resp.status === 404) {
+            console.log("404");
+            return ctx.render(null);
+        }
+        const courses: Array<Course> = await resp.json();
+        return ctx.render(courses);
+    },
+};
+
+const Education = ({ data }: PageProps<Array<Course> | null>) => {
+    
+
     return (
         <div class={tw`bg-gray-800 w-auto min-h-screen`}>
             <title>Yuanyi Wang | Education</title>
@@ -81,128 +97,7 @@ const Education = () => {
                     >
                         Courses
                     </h1>
-                    <div class={tw`flex flex-col justify-center`}>
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 555</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Foundations of Machine Learning |{" "}
-                                <span class={tw`text-pink-300`}>R</span>
-                            </div>
-                        </div>
-
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 566</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A-
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Analysis of Algorithms |{" "}
-                                <span class={tw`text-pink-300`}>Python</span>
-                            </div>
-                        </div>
-
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 575</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Operating Systems |{" "}
-                                <span class={tw`text-pink-300`}>C & Linux</span>
-                            </div>
-                        </div>
-
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 579</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Database Management |{" "}
-                                <span class={tw`text-pink-300`}>MySQL</span>
-                            </div>
-                        </div>
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 662</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>Computer Language Theory</div>
-                        </div>
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 673</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Software Engineering |{" "}
-                                <span class={tw`text-pink-300`}>Agile</span>
-                            </div>
-                        </div>
-
-                        <div
-                            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
-                        >
-                            <div class={tw`flex justify-between`}>
-                                <div class={tw`text-2xl`}>MET CS 683</div>
-                                <div>
-                                    Grade:{" "}
-                                    <span class={tw`text-lg text-pink-300`}>
-                                        A
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                Android Application Development |{" "}
-                                <span class={tw`text-pink-300`}>Kotlin</span>
-                            </div>
-                        </div>
-                    </div>
+                    {!data || data?.length == 0 ? error() : data.map(course)}
                 </div>
             </div>
 
