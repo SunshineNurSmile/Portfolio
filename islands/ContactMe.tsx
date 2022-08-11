@@ -3,6 +3,7 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
+import BACKEND_URL from "../helper/apiUrl.tsx";
 
 const ContactMe = () => {
     const WAIT_TIME = 60;
@@ -67,7 +68,7 @@ const ContactMe = () => {
             message,
         };
 
-        const contactUrl = Deno.env.get("BACKEND_URL") + "/contact";
+        const contactUrl = BACKEND_URL + "/contact";
 
         await fetch(contactUrl, {
             method: "POST",
