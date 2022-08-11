@@ -1,24 +1,59 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
 
 const ContactMe = () => {
-    const getElements = () => {
-        const nameEl = document.getElementById("name") as HTMLInputElement;
-        const name = nameEl.value;
-        const emailEl = document.getElementById("email") as HTMLInputElement;
-        const email = emailEl.value;
-        const messageEl = document.getElementById(
-            "message"
-        ) as HTMLInputElement;
-        const message = messageEl.value;
-        const form = document.querySelector("form");
-        return { name, email, message, form };
+    const WAIT_TIME = 5;
+    const [msgLength, setMsgLength] = useState(0);
+
+    const [email, setEmail] = useState("");
+    const handleEmailChange = (event: any) => {
+        setEmail(event.target.value);
     };
 
-    const send = () => {
-        const { name, email, message, form } = getElements();
+    const [name, setName] = useState("");
+    const handleNameChange = (event: any) => {
+        setName(event.target.value);
+    };
+
+    const [message, setMessage] = useState("");
+    const handleMessageChange = (event: any) => {
+        setMessage(event.target.value);
+        setMsgLength(event.target.value.length);
+    };
+
+    const [time, setTime] = useState(false);
+    const [second, setSecond] = useState(WAIT_TIME);
+
+    if (localStorage.getItem("wait") === "true") {
+        setTime(true);
+    }
+
+    useEffect(() => {
+        let timer: number;
+
+        function countdown() {
+            setSecond((preSecond) => {
+                if (preSecond <= 1) {
+                    setTime(false);
+                    localStorage.setItem("wait", "false");
+                    return WAIT_TIME;
+                } else {
+                    timer = setTimeout(countdown, 1000);
+                    return preSecond - 1;
+                }
+            });
+        }
+
+        if (time) {
+            timer = setTimeout(countdown, 1000);
+        }
+        return () => clearTimeout(timer);
+    }, [time]);
+
+    const send = async () => {
         if (!name || !email || !message) {
             alert("Please fill in all fields.");
             return;
@@ -36,43 +71,63 @@ const ContactMe = () => {
             message,
         };
 
-        fetch("https://portfoliodb.deno.dev/contact", {
+        const contactUrl = Deno.env.get("BACKEND_URL") + "/contact";
+
+        await fetch(contactUrl, {
             method: "POST",
             body: JSON.stringify(data),
+        }).catch(() => {
+            localStorage.setItem("wait", "true");
+            setTime(true);
+            alert("Message sent!");
         });
-
-        form!.reset();
     };
 
     return (
-        <div class={tw``}>
-            <form>
-                <div class="info">
+        <div
+            class={tw`flex flex-col justify-center items-center pt-24 ml-2 mr-2`}
+        >
+            <h1 class={tw`text-white text-4xl`}>Contact Me</h1>
+            <form
+                class={tw`p-6 bg-gray-900 border-none rounded-lg w-full max-w-2xl mt-6`}
+            >
+                <div>
                     <input
+                        class={tw`w-full p-2 border-2 rounded-lg outline-none focus:border-pink-300`}
                         type="text"
-                        name="name"
                         placeholder="Name"
                         id="name"
-                        required
+                        onInput={handleNameChange}
                     />
                     <input
+                        class={tw`w-full p-2 mt-2 border-2 rounded-lg outline-none focus:border-pink-300`}
                         type="email"
-                        name="email"
                         placeholder="Email"
                         id="email"
-                        required
+                        onInput={handleEmailChange}
                     />
                 </div>
                 <div>
                     <textarea
-                        name="message"
+                        class={tw`w-full h-40 p-2 mt-2 border-2 rounded-lg outline-none focus:border-pink-300 resize-none`}
                         placeholder="Message"
                         id="message"
-                        required
+                        maxLength={1000}
+                        onInput={handleMessageChange}
                     ></textarea>
+                    <div class={tw`text-white flex justify-end`}>
+                        {msgLength} / 1000
+                    </div>
                 </div>
-                <div class={tw`text-white`} onClick={send}>
-                    Send
+                <div class={tw`w-full flex justify-center mt-4`}>
+                    <button
+                        class={tw`w-24 transition ease-in duration-600 border rounded text-white text-center text-2xl py-1 enabled:hover:bg-pink-300 enabled:hover:border-pink-300 disabled:text-gray-500 disabled:border-gray-500 disabled:hover:cursor-not-allowed`}
+                        onClick={send}
+                        disabled={time}
+                        id="button"
+                    >
+                        {!time ? "Send" : second + "s"}
+                    </button>
                 </div>
             </form>
         </div>
