@@ -5,7 +5,7 @@ import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
 
 const ContactMe = () => {
-    const WAIT_TIME = 5;
+    const WAIT_TIME = 60;
     const [msgLength, setMsgLength] = useState(0);
 
     const [email, setEmail] = useState("");
@@ -27,10 +27,6 @@ const ContactMe = () => {
     const [time, setTime] = useState(false);
     const [second, setSecond] = useState(WAIT_TIME);
 
-    if (localStorage.getItem("wait") === "true") {
-        setTime(true);
-    }
-
     useEffect(() => {
         let timer: number;
 
@@ -38,7 +34,6 @@ const ContactMe = () => {
             setSecond((preSecond) => {
                 if (preSecond <= 1) {
                     setTime(false);
-                    localStorage.setItem("wait", "false");
                     return WAIT_TIME;
                 } else {
                     timer = setTimeout(countdown, 1000);
@@ -53,7 +48,8 @@ const ContactMe = () => {
         return () => clearTimeout(timer);
     }, [time]);
 
-    const send = async () => {
+    const send = async (event: any) => {
+        event.preventDefault();
         if (!name || !email || !message) {
             alert("Please fill in all fields.");
             return;
@@ -76,10 +72,17 @@ const ContactMe = () => {
         await fetch(contactUrl, {
             method: "POST",
             body: JSON.stringify(data),
-        }).catch(() => {
-            localStorage.setItem("wait", "true");
+        }).then(() => {
+            document.querySelector("form")!.reset();
+            setMsgLength(0);
+            setName("");
+            setEmail("");
+            setMessage("");
             setTime(true);
             alert("Message sent!");
+        }).catch((err) => {
+            console.log(err);
+            alert("Could not send message. Please try again later.");
         });
     };
 
