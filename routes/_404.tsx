@@ -3,7 +3,7 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { UnknownPageProps } from "$fresh/server.ts";
 import NavBar from "../islands/NavBar.tsx";
-import Contact from "../islands/Contact.tsx";
+import Footer from "../islands/Footer.tsx";
 
 const NotFoundPage = ({url}: UnknownPageProps) => {
     return (
@@ -29,7 +29,7 @@ const NotFoundPage = ({url}: UnknownPageProps) => {
                 </div>
             </div>
 
-            <Contact />
+            <Footer />
         </div>
     );
 };
