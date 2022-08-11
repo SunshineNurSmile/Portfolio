@@ -2,9 +2,9 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import Contact from "../islands/Contact.tsx";
+import Footer from "../islands/Footer.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Course, { error, course } from "../interfaces/course.tsx";
+import Course, { error, course } from "../helper/course.tsx";
 
 export const handler: Handlers<Array<Course> | null> = {
     async GET(_, ctx) {
@@ -28,7 +28,7 @@ const Education = ({ data }: PageProps<Array<Course> | null>) => {
 
             <NavBar />
 
-            <div class={tw`flex justify-center text-white pt-24 pb-20`}>
+            <div class={tw`flex justify-center text-white pt-24 pb-24`}>
                 <div
                     class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
                 >
@@ -102,7 +102,7 @@ const Education = ({ data }: PageProps<Array<Course> | null>) => {
                 </div>
             </div>
 
-            <Contact />
+            <Footer />
         </div>
     );
 };

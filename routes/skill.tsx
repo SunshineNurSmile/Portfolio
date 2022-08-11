@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import Contact from "../islands/Contact.tsx";
+import Footer from "../islands/Footer.tsx";
 
 const Skill = () => {
     return (
@@ -11,7 +11,7 @@ const Skill = () => {
 
             <NavBar />
 
-            <div class={tw`flex justify-center text-white pt-24 pb-20`}>
+            <div class={tw`flex justify-center text-white pt-24 pb-24`}>
                 <div
                     class={tw`flex flex-col justify-center w-full max-w-2xl ml-2 mr-2`}
                 >
@@ -193,7 +193,7 @@ const Skill = () => {
                 </div>
             </div>
 
-            <Contact />
+            <Footer />
         </div>
     );
 };

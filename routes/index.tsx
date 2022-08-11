@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import Contact from "../islands/Contact.tsx";
+import Footer from "../islands/Footer.tsx";
 
 const Home = () => {
     return (
@@ -34,14 +34,14 @@ const Home = () => {
             </div>
 
             <div
-                class={tw`absolute bottom-20 w-screen flex flex-col justify-center text-white`}
+                class={tw`absolute bottom-24 w-screen flex flex-col justify-center text-white`}
             >
                 <div class={tw`flex justify-center`}>
                     Please note that this website is at an early stage
                 </div>
             </div>
 
-            <Contact />
+            <Footer />
         </div>
     );
 };
