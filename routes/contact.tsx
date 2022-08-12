@@ -8,7 +8,7 @@ import ContactMe from "../islands/ContactMe.tsx";
 const contact = () => {
     const BACKEND_URL = Deno.env.get("BACKEND_URL");
     return (
-        <div class={tw`bg-gray-800 h-screen w-screen`}>
+        <div class={tw`bg-gray-800 w-auto min-h-screen`}>
             <title>Yuanyi Wang | Contact</title>
             <NavBar />
             <ContactMe url={BACKEND_URL!} />
