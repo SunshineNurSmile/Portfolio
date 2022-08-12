@@ -5,10 +5,11 @@ import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import Course, { error, course } from "../helper/course.tsx";
+import { BACKEND_URL } from "../routes/index.tsx";
 
 export const handler: Handlers<Array<Course> | null> = {
     async GET(_, ctx) {
-        const dbURL = Deno.env.get("BACKEND_URL") + "/courses";
+        const dbURL = BACKEND_URL + "/courses";
         const resp = await fetch(dbURL);
         if (resp.status === 404) {
             console.log("404");
@@ -20,8 +21,6 @@ export const handler: Handlers<Array<Course> | null> = {
 };
 
 const Education = ({ data }: PageProps<Array<Course> | null>) => {
-    
-
     return (
         <div class={tw`bg-gray-800 w-auto min-h-screen`}>
             <title>Yuanyi Wang | Education</title>

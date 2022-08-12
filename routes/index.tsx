@@ -4,12 +4,10 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
 
-const url = Deno.env.get("BACKEND_URL");
-console.log(url + "1");
+const BACKEND_URL = Deno.env.get("BACKEND_URL");
+export { BACKEND_URL };
 
 const Home = () => {
-    const url = Deno.env.get("BACKEND_URL");
-    console.log(url + "2");
     return (
         <div class={tw`bg-gray-800 h-screen w-screen`}>
             <title>Yuanyi Wang | Home</title>

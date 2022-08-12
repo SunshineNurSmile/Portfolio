@@ -23,7 +23,4 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
     ctx.state.set("twind", newSnapshot);
 }
 
-const BACKEND_URL = Deno.env.get("BACKEND_URL");
-export { BACKEND_URL };
-
 await start(manifest, { render });

@@ -3,7 +3,7 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
-import {BACKEND_URL} from "../main.ts";
+import { BACKEND_URL } from "../routes/index.tsx";
 
 const ContactMe = () => {
     const WAIT_TIME = 60;
@@ -73,18 +73,20 @@ const ContactMe = () => {
         await fetch(contactUrl, {
             method: "POST",
             body: JSON.stringify(data),
-        }).then(() => {
-            document.querySelector("form")!.reset();
-            setMsgLength(0);
-            setName("");
-            setEmail("");
-            setMessage("");
-            setTime(true);
-            alert("Message sent!");
-        }).catch((err) => {
-            console.log(err);
-            alert("Could not send message. Please try again later.");
-        });
+        })
+            .then(() => {
+                document.querySelector("form")!.reset();
+                setMsgLength(0);
+                setName("");
+                setEmail("");
+                setMessage("");
+                setTime(true);
+                alert("Message sent!");
+            })
+            .catch((err) => {
+                console.log(err);
+                alert("Could not send message. Please try again later.");
+            });
     };
 
     return (
