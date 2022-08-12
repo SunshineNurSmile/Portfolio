@@ -90,7 +90,7 @@ const ContactMe = ({ url }: { url: string }) => {
 
     return (
         <div
-            class={tw`flex flex-col justify-center items-center pt-24 ml-2 mr-2`}
+            class={tw`flex flex-col justify-center items-center pt-24 pb-24 ml-2 mr-2`}
         >
             <h1 class={tw`text-white text-4xl`}>Contact Me</h1>
             <form
