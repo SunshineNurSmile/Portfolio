@@ -3,9 +3,8 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
-import { BACKEND_URL } from "../routes/index.tsx";
 
-const ContactMe = () => {
+const ContactMe = ({ url }: { url: string }) => {
     const WAIT_TIME = 60;
     const [msgLength, setMsgLength] = useState(0);
 
@@ -68,7 +67,7 @@ const ContactMe = () => {
             message,
         };
 
-        const contactUrl = BACKEND_URL + "/contact";
+        const contactUrl = url + "/contact";
 
         await fetch(contactUrl, {
             method: "POST",

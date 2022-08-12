@@ -4,9 +4,6 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
 
-const BACKEND_URL = Deno.env.get("BACKEND_URL");
-export { BACKEND_URL };
-
 const Home = () => {
     return (
         <div class={tw`bg-gray-800 h-screen w-screen`}>
