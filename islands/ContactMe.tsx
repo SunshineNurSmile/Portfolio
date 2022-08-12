@@ -3,8 +3,7 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
-
-const BACKEND_URL = Deno.env.get("BACKEND_URL");
+import {BACKEND_URL} from "../main.ts";
 
 const ContactMe = () => {
     const WAIT_TIME = 60;
