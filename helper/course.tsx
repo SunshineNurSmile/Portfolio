@@ -7,7 +7,6 @@ interface Course {
     title: string;
     tech: string;
     grade: string;
-    school: string;
 }
 
 const error = () => {
@@ -21,7 +20,7 @@ const error = () => {
 const course = (course: Course) => {
     return (
         <div
-            class={tw`flex flex-col justify-center bg-gray-900 border-none rounded-lg p-6 mt-6`}
+            class={tw`bg-gray-900 border-none rounded-lg p-6 mt-6`}
         >
             <div class={tw`flex justify-between`}>
                 <div class={tw`text-2xl`}>MET CS {course.number}</div>
@@ -32,14 +31,9 @@ const course = (course: Course) => {
                     </span>
                 </div>
             </div>
-            <div class={tw`flex justify-between`}>
-                <div>
-                    {course.title} {!course.tech? "" : "| "}
-                    <span class={tw`text-pink-300`}>{course.tech}</span>
-                </div>
-                <div>
-                    {course.school}
-                </div>
+            <div>
+                {course.title} {!course.tech ? "" : "| "}
+                <span class={tw`text-pink-300`}>{course.tech}</span>
             </div>
         </div>
     );
