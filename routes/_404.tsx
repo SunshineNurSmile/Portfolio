@@ -2,13 +2,16 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import { UnknownPageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
 import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
 
-const NotFoundPage = ({url}: UnknownPageProps) => {
+const NotFoundPage = ({ url }: UnknownPageProps) => {
     return (
         <div class={tw`bg-gray-800 h-screen w-screen`}>
-            <title>Yuanyi Wang | 404</title>
+            <Head>
+                <title>Yuanyi Wang | 404</title>
+            </Head>
 
             <NavBar />
 
@@ -18,7 +21,9 @@ const NotFoundPage = ({url}: UnknownPageProps) => {
                 <div class={tw`text-6xl text-pink-300 sm:text-8xl`}>
                     Error! 404
                 </div>
-                <div class={tw`text-2xl text-white sm:text-4xl`}>yuanyiwang.info{url.pathname}</div>
+                <div class={tw`text-2xl text-white sm:text-4xl`}>
+                    yuanyiwang.info{url.pathname}
+                </div>
                 <div class={tw`text-2xl text-white sm:text-4xl`}>
                     Does Not Exist
                 </div>

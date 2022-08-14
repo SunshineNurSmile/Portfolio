@@ -1,9 +1,11 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
 import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
-import { Handlers, PageProps } from "$fresh/server.ts";
+
 import Course, { error, course } from "../helper/course.tsx";
 
 export const handler: Handlers<Array<Course> | null> = {
@@ -22,7 +24,9 @@ export const handler: Handlers<Array<Course> | null> = {
 const Education = ({ data }: PageProps<Array<Course> | null>) => {
     return (
         <div class={tw`bg-gray-800 w-auto min-h-screen`}>
-            <title>Yuanyi Wang | Education</title>
+            <Head>
+                <title>Yuanyi Wang | Education</title>
+            </Head>
 
             <NavBar />
 

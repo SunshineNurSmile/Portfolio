@@ -1,9 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-//import { useState, useLayoutEffect } from "preact/hooks";
-import NavBar from "../islands/NavBar.tsx";
-import Footer from "../islands/Footer.tsx";
+import { Head } from "$fresh/runtime.ts";
 import ContactMe from "../islands/ContactMe.tsx";
 
 const contact = () => {
@@ -11,12 +9,11 @@ const contact = () => {
 
     return (
         <div class={tw`bg-gray-800 w-auto min-h-screen`}>
-            <title>Yuanyi Wang | Contact</title>
-            {/* {show ? <NavBar /> : null} */}
-            <NavBar />
-            <ContactMe url={BACKEND_URL!} />
-            {/* {show ? <Footer /> : null} */}
-            <Footer />
+            <Head>
+                <title>Yuanyi Wang | Contact</title>
+            </Head>
+
+            <ContactMe BACKEND_URL={BACKEND_URL!} />
         </div>
     );
 };

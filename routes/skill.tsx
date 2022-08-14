@@ -1,13 +1,16 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import { Head } from "$fresh/runtime.ts";
 import NavBar from "../islands/NavBar.tsx";
 import Footer from "../islands/Footer.tsx";
 
 const Skill = () => {
     return (
         <div class={tw`bg-gray-800 w-auto min-h-screen`}>
-            <title>Yuanyi Wang | Skill</title>
+            <Head>
+                <title>Yuanyi Wang | Skill</title>
+            </Head>
 
             <NavBar />
 
