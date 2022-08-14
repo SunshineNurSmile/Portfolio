@@ -3,29 +3,48 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
+import Message from "../helper/message.tsx";
 
 const ContactMe = ({ url }: { url: string }) => {
     const WAIT_TIME = 60;
+    const msg: Message = {
+        name: "",
+        email: "",
+        message: "",
+    };
+
     const [msgLength, setMsgLength] = useState(0);
-
-    const [email, setEmail] = useState("");
-    const handleEmailChange = (event: any) => {
-        setEmail(event.target.value);
-    };
-
-    const [name, setName] = useState("");
-    const handleNameChange = (event: any) => {
-        setName(event.target.value);
-    };
-
-    const [message, setMessage] = useState("");
-    const handleMessageChange = (event: any) => {
-        setMessage(event.target.value);
-        setMsgLength(event.target.value.length);
-    };
-
     const [time, setTime] = useState(false);
     const [second, setSecond] = useState(WAIT_TIME);
+    const [message, setMessage] = useState(msg);
+    
+    const handleEmailChange = (event: any) => {
+        setMessage((prev) => {
+            return {
+                ...prev,
+                email: event.target.value,
+            };
+        });
+    };
+
+    const handleNameChange = (event: any) => {
+        setMessage((prev) => {
+            return {
+                ...prev,
+                name: event.target.value,
+            };
+        });
+    };
+
+    const handleMessageChange = (event: any) => {
+        setMessage((prev) => {
+            return {
+                ...prev,
+                message: event.target.value,
+            };
+        });
+        setMsgLength(event.target.value.length);
+    };
 
     useEffect(() => {
         let timer: number;
@@ -50,35 +69,27 @@ const ContactMe = ({ url }: { url: string }) => {
 
     const send = async (event: any) => {
         event.preventDefault();
-        if (!name || !email || !message) {
+        if (!message.name || !message.email || !message.message) {
             alert("Please fill in all fields.");
             return;
         }
 
-        if (!testEmail(email)) {
+        if (!testEmail(message.email)) {
             alert("Please enter a valid email.");
             document.getElementById("email")!.focus();
             return;
         }
 
-        const data = {
-            name,
-            email,
-            message,
-        };
-
         const contactUrl = url + "/contact";
 
         await fetch(contactUrl, {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(message),
         })
             .then(() => {
                 document.querySelector("form")!.reset();
                 setMsgLength(0);
-                setName("");
-                setEmail("");
-                setMessage("");
+                setMessage(msg);
                 setTime(true);
                 alert("Message sent!");
             })
@@ -102,6 +113,7 @@ const ContactMe = ({ url }: { url: string }) => {
                         type="text"
                         placeholder="Name"
                         id="name"
+                        name="name"
                         onInput={handleNameChange}
                     />
                     <input
@@ -109,6 +121,7 @@ const ContactMe = ({ url }: { url: string }) => {
                         type="email"
                         placeholder="Email"
                         id="email"
+                        name="email"
                         onInput={handleEmailChange}
                     />
                 </div>
@@ -117,6 +130,7 @@ const ContactMe = ({ url }: { url: string }) => {
                         class={tw`w-full h-40 p-2 mt-2 border-2 rounded-lg outline-none focus:border-pink-300 resize-none`}
                         placeholder="Message"
                         id="message"
+                        name="message"
                         maxLength={1000}
                         onInput={handleMessageChange}
                     ></textarea>
