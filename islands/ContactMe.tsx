@@ -5,7 +5,7 @@ import { useEffect, useState } from "preact/hooks";
 import testEmail from "../helper/testEmail.tsx";
 import Message from "../helper/message.tsx";
 
-const ContactMe = ({ url }: { url: string }) => {
+const ContactMe = ({ BACKEND_URL }: { BACKEND_URL: string }) => {
     const WAIT_TIME = 60;
     const msg: Message = {
         name: "",
@@ -17,7 +17,7 @@ const ContactMe = ({ url }: { url: string }) => {
     const [time, setTime] = useState(false);
     const [second, setSecond] = useState(WAIT_TIME);
     const [message, setMessage] = useState(msg);
-    
+
     const handleEmailChange = (event: any) => {
         setMessage((prev) => {
             return {
@@ -80,7 +80,7 @@ const ContactMe = ({ url }: { url: string }) => {
             return;
         }
 
-        const contactUrl = url + "/contact";
+        const contactUrl = BACKEND_URL + "/contact";
 
         await fetch(contactUrl, {
             method: "POST",
@@ -101,7 +101,7 @@ const ContactMe = ({ url }: { url: string }) => {
 
     return (
         <div
-            class={tw`flex flex-col justify-center items-center pt-24 pb-24 ml-2 mr-2`}
+            class={tw`flex flex-col justify-center items-center pt-20 ml-2 mr-2`}
         >
             <h1 class={tw`text-white text-4xl`}>Contact Me</h1>
             <form
@@ -138,9 +138,14 @@ const ContactMe = ({ url }: { url: string }) => {
                         {msgLength} / 1000
                     </div>
                 </div>
-                <div class={tw`w-full flex justify-center mt-4`}>
+                <div class={tw`w-full flex gap-4 justify-center mt-4`}>
                     <button
-                        class={tw`w-24 transition ease-in duration-600 border rounded text-white text-center text-2xl py-1 enabled:hover:bg-pink-300 enabled:hover:border-pink-300 disabled:text-gray-500 disabled:border-gray-500 disabled:hover:cursor-not-allowed`}
+                        class={tw`w-24 transition ease-in duration-600 border rounded text-white text-center text-2xl py-1 hover:bg-pink-300 hover:border-pink-300`}
+                    >
+                        <a href="/">Cancel</a>
+                    </button>
+                    <button
+                        class={tw`w-24 transition ease-in duration-600 border border-pink-300 rounded text-white text-center text-2xl py-1 enabled:hover:bg-pink-300 disabled:text-gray-500 disabled:border-gray-500 disabled:hover:cursor-not-allowed`}
                         onClick={send}
                         disabled={time}
                         id="button"
