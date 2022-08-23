@@ -10,8 +10,7 @@ import Course, { error, course } from "../helper/course.tsx";
 
 export const handler: Handlers<Array<Course> | null> = {
     async GET(_, ctx) {
-        //const dbURL = Deno.env.get("BACKEND_URL") + "/courses";
-        const dbURL = "https://portfoliodb.deno.dev/courses";
+        const dbURL = Deno.env.get("BACKEND_URL") + "/courses";
         const resp = await fetch(dbURL);
         if (resp.status === 404) {
             console.log("404");
