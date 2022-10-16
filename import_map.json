@@ -1,8 +1,8 @@
 {
     "imports": {
         "$fresh/": "https://deno.land/x/fresh@1.1.2/",
-        "preact": "https://esm.sh/preact@10.11.1",
-        "preact/": "https://esm.sh/preact@10.11.1/",
+        "preact": "https://esm.sh/preact@10.11.2",
+        "preact/": "https://esm.sh/preact@10.11.2/",
         "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.5?external=preact",
         "@twind": "./utils/twind.ts",
         "twind": "https://esm.sh/twind@0.16.17",
